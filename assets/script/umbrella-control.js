@@ -11,8 +11,10 @@ cc.Class({
         //umbrella: cc.Node,
 
         bulletPrefab: cc.Prefab,
-        _hitRange: null,
+        hitRange: cc.Node,
         _lockVector: null,
+
+        player: cc.Node,
 
         _worldTargetPosition: null,
     },
@@ -81,6 +83,7 @@ cc.Class({
 
     onHit: function(){
         this._state = 'hit';
+        this.hitRange.emit('hit',this._vector);
         let hitAnimState = this.umbrellaAnim.play('hit');
     },
 

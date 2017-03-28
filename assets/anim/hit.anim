@@ -163,18 +163,7 @@
     },
     "paths": {
       "hit-range": {
-        "props": {
-          "active": [
-            {
-              "frame": 0,
-              "value": true
-            },
-            {
-              "frame": 0.24,
-              "value": false
-            }
-          ]
-        }
+        "props": {}
       }
     },
     "comps": {
