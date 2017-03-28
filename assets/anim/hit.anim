@@ -1,0 +1,194 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "hit",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.66,
+  "sample": 50,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "position": [
+        {
+          "frame": 0,
+          "value": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 0.04,
+          "value": [
+            -13,
+            36.8
+          ]
+        },
+        {
+          "frame": 0.08,
+          "value": [
+            27.5,
+            31.8
+          ]
+        },
+        {
+          "frame": 0.12,
+          "value": [
+            -13,
+            37
+          ]
+        },
+        {
+          "frame": 0.16,
+          "value": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 0.2,
+          "value": [
+            43.3,
+            0
+          ]
+        },
+        {
+          "frame": 0.24,
+          "value": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 0.28,
+          "value": [
+            -10.8,
+            -34.6
+          ]
+        },
+        {
+          "frame": 0.32,
+          "value": [
+            21,
+            -30.1
+          ]
+        },
+        {
+          "frame": 0.36,
+          "value": [
+            -10,
+            -34
+          ]
+        },
+        {
+          "frame": 0.4,
+          "value": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 0.46,
+          "value": [
+            42.2,
+            0
+          ]
+        },
+        {
+          "frame": 0.5,
+          "value": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 0.54,
+          "value": [
+            -13,
+            37
+          ]
+        },
+        {
+          "frame": 0.58,
+          "value": [
+            27.2,
+            32.1
+          ]
+        },
+        {
+          "frame": 0.62,
+          "value": [
+            -12.3,
+            36.9
+          ]
+        },
+        {
+          "frame": 0.66,
+          "value": [
+            0,
+            0
+          ]
+        }
+      ],
+      "rotation": [
+        {
+          "frame": 0,
+          "value": 90
+        },
+        {
+          "frame": 0.04,
+          "value": 97
+        },
+        {
+          "frame": 0.16,
+          "value": 90
+        },
+        {
+          "frame": 0.28,
+          "value": 82
+        },
+        {
+          "frame": 0.4,
+          "value": 90
+        },
+        {
+          "frame": 0.54,
+          "value": 97
+        },
+        {
+          "frame": 0.66,
+          "value": 90
+        }
+      ]
+    },
+    "paths": {
+      "hit-range": {
+        "props": {
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 0.24,
+              "value": false
+            }
+          ]
+        }
+      }
+    },
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "98444c84-ea9a-4894-91a6-72f50d7cd84b"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
