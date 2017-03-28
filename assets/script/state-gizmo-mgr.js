@@ -25,6 +25,9 @@ cc.Class({
         this._fsm.onopen =  function(){
             this.player.emit('open');
         }.bind(this);
+        this._fsm.onleaveopening = function(){
+            this.player.emit('leave-open');
+        }.bind(this);
     },
 
     start: function(){

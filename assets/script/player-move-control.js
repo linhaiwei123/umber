@@ -25,16 +25,34 @@ cc.Class({
         _downBlock: 0,
 
         _space: false,
+
+        _open: false,
+        _umbrellaControl: {
+            get: function(){
+                return this.getComponent('umbrella-control');
+            }
+        },
+        drag: 0.3,
     },
 
 
     onLoad: function () {
+        this.node.on('open',this.onOpen,this);
+        this.node.on('leave-open',this.onLeaveOpen,this);
+
         let manager = cc.director.getCollisionManager();
         manager.enabled = true;
         cc.systemEvent.on('keydown',this.onKeyDown,this);
         cc.systemEvent.on('keyup',this.onKeyUp,this);
     },
 
+    onOpen: function(){
+        this._open = true;
+    },
+
+    onLeaveOpen: function(){
+        this._open = false;
+    },
 
     onKeyDown: function(e){
         switch(e.keyCode){
@@ -181,11 +199,21 @@ cc.Class({
        if(this._upBlock && this._speed.y > 0){this._speed.y = 0;}
        if(this._downBlock && this._speed.y < 0){this._speed.y = 0;}
        
-       
+       let speedWithAirDrag = this._speed;
+       if(this._open){
+            let vector = this._umbrellaControl._vector;
+            if(vector){
+                //伪浮力 : 速度方向 点乘 开伞方向 得到比例 再开放接口修改浮力阻力系数;
+                let rate = cc.pDot(cc.pNormalize(this._speed),cc.pNormalize(vector));
+                speedWithAirDrag = cc.pMult(this._speed,(1 + rate * this.drag));
+            }
+       }
 
        //this._speed = cc.pClamp(this._speed,cc.v2(-this.maxSpeed,-this.maxSpeed),cc.v2(this.maxSpeed,this.maxSpeed))
 
-       let diff = cc.pMult(this._speed,dt);
+       //let diff = cc.pMult(this._speed,dt);
+       //[add] add air drag 
+       let diff = cc.pMult(speedWithAirDrag,dt);
        this.node.position = cc.pAdd(this.node.position,diff);
        this.node.parent.position =cc.pAdd(this.node.parent.position,cc.pNeg(diff));
 

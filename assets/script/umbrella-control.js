@@ -14,7 +14,7 @@ cc.Class({
         hitRange: cc.Node,
         _lockVector: null,
 
-        player: cc.Node,
+        //player: cc.Node,
 
         _worldTargetPosition: null,
     },
