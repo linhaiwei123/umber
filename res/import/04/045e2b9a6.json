@@ -1,0 +1,1 @@
+[{"__type__":"cc.SpriteFrame","content":{"name":"umbrella_normal","texture":"b9148c7c-43d8-40d2-b90f-9bc56de2f571","rect":[33,1,34,97],"offset":[0,0.5],"originalSize":[100,100]}},{"__type__":"cc.SpriteFrame","content":{"name":"default_sprite_splash","texture":"0275e94c-56a7-410f-bd1a-fc7483f7d14a","rect":[0,0,2,2],"offset":[0,0],"originalSize":[2,2]}}]
