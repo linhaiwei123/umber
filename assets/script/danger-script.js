@@ -4,6 +4,7 @@ cc.Class({
     properties: {
         hitMaxTime: 6,
         canDestroy: true,
+        playerHurtHpUnit: 5,
     },
 
 
@@ -23,6 +24,7 @@ cc.Class({
     checkDestroy:function(){
         if(this.hitMaxTime <= 0 && this.canDestroy){
             this.node.removeFromParent(true);
+            cc.find('Canvas').emit('player-hp-up',this.playerHurtHpUnit);
         }
     },
 
@@ -34,12 +36,14 @@ cc.Class({
 
     onBulletExit: function(){
         //bullet exit anim color?
-
+        
     },
 
     onCollisionEnter: function(other,self){
         if(other.node.group == 'bullet'){
             this.onBulletEnter();
+        }else if(other.node.group == 'player'){
+            cc.find('Canvas').emit('player-hp-down',this.playerHurtHpUnit);
         }
     },
 
