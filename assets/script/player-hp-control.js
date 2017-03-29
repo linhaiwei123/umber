@@ -33,7 +33,7 @@ cc.Class({
     checkDead: function(){
         if(this.hp <= 0){
             //game over
-            cc.find('Canvas').emit('game-over');
+            cc.find('Canvas').emit('hp-zero');
             //console.log('game-over');
         }
     },

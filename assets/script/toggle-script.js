@@ -13,7 +13,7 @@ cc.Class({
     },
 
     onCollisionEnter: function(other,self){
-        if(other.node.group == 'player' || other.node.group == 'bullet' || other.node.group == 'hit-range'){
+        if(other.node.group == 'bullet'){
             for(let item of this.toggleArray){
                 item.active = !item.active;
             }

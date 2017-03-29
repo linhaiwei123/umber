@@ -215,7 +215,13 @@ cc.Class({
        //[add] add air drag 
        let diff = cc.pMult(speedWithAirDrag,dt);
        this.node.position = cc.pAdd(this.node.position,diff);
-       this.node.parent.position =cc.pAdd(this.node.parent.position,cc.pNeg(diff));
+       //[fix] fix the offset of camera by use the positive position
+       //this.node.parent.position =cc.pAdd(this.node.parent.position,cc.pNeg(diff));
+       //[add] add the drag to the camera
+       //[delete] delete the drag to the camera
+       this.node.parent.position = cc.pNeg(this.node.position);
+       //this.node.parent.stopAction();
+       //this.node.parent.runAction(cc.moveTo(1,cc.pNeg(this.node.position)));
 
     }
 });

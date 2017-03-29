@@ -435,8 +435,8 @@
     "_down": false,
     "_leftRelease": false,
     "_rightRelease": false,
-    "stepX": 200,
-    "stepY": 200,
+    "stepX": 150,
+    "stepY": 250,
     "_outerSpeed": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -445,7 +445,7 @@
     "a": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -180
+      "y": -500
     },
     "_speed": {
       "__type__": "cc.Vec2",
@@ -459,7 +459,7 @@
     "_downBlock": 0,
     "_space": false,
     "_open": false,
-    "drag": 0.8
+    "drag": 0.5
   },
   {
     "__type__": "cc.BoxCollider",

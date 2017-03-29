@@ -38,13 +38,13 @@ cc.Class({
     // },
 
     onCollisionEnter: function(other,self){
-        if(other.node.group == 'danger'){
+        if(other.node.group == 'danger' || other.node.group == 'audio-core'){
             this._colliderArray[other.node.uuid] = other.node;
         }
     },
 
     onCollisionExit: function(other,self){
-        if(other.node.group == 'danger'){
+        if(other.node.group == 'danger' || other.node.group == 'audio-core'){
             delete this._colliderArray[other.node.uuid];
         }
     },

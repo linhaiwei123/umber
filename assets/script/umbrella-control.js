@@ -59,7 +59,7 @@ cc.Class({
 
 
     onMouseMove: function(e){
-        console.log(e.getLocation());
+        //console.log(e.getLocation());
         this._worldPosition = this._lockVector ? this._lockVector : e.getLocation();
         this.updateVector();
     },

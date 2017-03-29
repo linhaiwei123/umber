@@ -12,7 +12,10 @@ cc.Class({
         let manager = cc.director.getCollisionManager();
         manager.enabled = true;
         //this.node.name = 'btn#' + Date.now();
+        //this.node.on('hit',this.onHit,this);
     },
+
+
 
     start: function(){
         for(let item of this.btnArray){
@@ -21,7 +24,7 @@ cc.Class({
     },
 
     onCollisionEnter: function(other,self){
-        if(other.node.group == 'player' || other.node.group == 'bullet' || other.node.group == 'hit-range'){
+        if(other.node.group == 'bullet'){
             this._touchNum++;
             this.node.color = cc.Color.GREEN;
             for(let item of this.btnArray){
@@ -31,7 +34,7 @@ cc.Class({
     },
 
     onCollisionExit: function(other,self){
-        if(other.node.group == 'player' || other.node.group == 'bullet' || other.node.group == 'hit-range'){
+        if(other.node.group == 'bullet'){
             this._touchNum--;
             if(!this._touchNum){
                 for(let item of this.btnArray){
